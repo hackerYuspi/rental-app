@@ -1,0 +1,25 @@
+<form (ngSubmit)="signup(signupForm)" #signupForm="ngForm" >
+  <h2>Sign Up Here</h2>
+  <div class="form-group">
+    <label for="InputEmail1">Email address</label>
+    <input name="inputemail"  ngModel type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required autofocus="">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input name="inputpassword"  ngModel type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
+  </div>
+  <div class="form-group">
+      <label for="inputdob">Date of Birth</label>
+      <input name="inputdob" ngModel type="date" class="form-control" id="inputdob" required>
+    </div>
+    <div class="form-group">
+      <label for="inputcontact">Contact Number</label>
+      <input name="inputcontact" ngModel type="text" class="form-control" id="inputcontact" required>
+    </div>
+  
+    <button [disabled]="!signupForm.valid" type="submit" class="btn btn-primary btn-block">Submit</button>
+  
+    Already a Member? <a routerLink="/auth/signin">Sign In Here</a>
+    
+</form>
