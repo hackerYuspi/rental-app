@@ -1,5 +1,5 @@
-<div class="container" >
-  <h2>Add your Property for Rent</h2>
+<div style="padding: 2.5cm;background-image:url('/assets/images/back-addrental.jpeg')" class="container" >
+  <h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;color:darkcyan; " >Add your Property for Rent</h2>
   <p *ngIf="isPropertyAdded" style="color:green">Your property is added succesfully</p>
   <br><br>
   <form (ngSubmit)="addProperty(addRentalForm)" #addRentalForm="ngForm">
@@ -36,6 +36,6 @@
       <input name="ownercontact" ngModel type="text" class="form-control" placeholder="Owner Contact" required>
     </div>
 
-    <button type="submit" [disabled]="!addRentalForm.valid" class="btn btn-primary btn-block">Submit</button>
+    <button style="background-color:black" type="submit" [disabled]="!addRentalForm.valid" class="btn btn-primary btn-block">Submit</button>
   </form>
 </div>

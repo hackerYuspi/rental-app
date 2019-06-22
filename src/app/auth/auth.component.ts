@@ -7,13 +7,14 @@ import { Router } from '@angular/router';
   styleUrls: ['./auth.component.css']
 })
 export class AuthComponent implements OnInit {
-
+  mode=true;
   constructor(public router:Router) { }
 
   ngOnInit() {
   }
 
   changeRoute(path){
+    this.mode=false;
     this.router.navigateByUrl(path)
   }
 }
