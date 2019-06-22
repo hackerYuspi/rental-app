@@ -19,7 +19,6 @@ export class RentalsComponent implements OnInit {
   getAllProperties(){
     this.rentalService.getAllRentals().subscribe(res=>{
       this.properties=res
-      console.log(this.properties)
     })
   }
 

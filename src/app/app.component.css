@@ -1,0 +1,8 @@
+.image
+{
+    height: 40em;
+    background-size: cover;
+    width:auto;
+    background-position: 50% 50%;
+    background-image: url('/assets/images/Background.png')
+}

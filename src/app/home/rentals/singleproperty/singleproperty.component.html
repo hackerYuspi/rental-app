@@ -11,11 +11,23 @@
     <div class="col">
       <h2>Owners Details</h2>
       <br>
-      <p style="color: blue">Owners Name : {{property.ownername}}</p>
-      <p style="color: blue">Contact : {{property.ownercontact}}</p>
+      <p style="color: rgb(48, 141, 133)">Owners Name : {{property.ownername}}</p>
+      <p style="color: rgb(48, 141, 133)">Contact : {{property.ownercontact}}</p>
       <br>
       <h2 style="color: red">Price</h2>
       <h4 style="color: green">{{property.price}}</h4>
+      <button (click)="showForm=!showForm" class="btn btn-primary btn-block">Enquiry</button>
+
+      <ng-container *ngIf="showForm">
+          <form (ngSubmit)="sendEnquiry(enquiryForm)" #enquiryForm="ngForm">
+            <div class="from-group">
+              <label>Message</label>
+              <input ngModel name="message" type="text" class="form-control" placeholder="Enter Message">
+            </div>
+            <button type="submit">Send Enquiry</button>
+          </form>
+      </ng-container>
+
     </div>
   </div>
 </div>
