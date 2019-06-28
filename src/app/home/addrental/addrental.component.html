@@ -27,13 +27,12 @@
     </div>
 
     <div class="form-group">
-      <label for="ownername">Owner Name</label>
-      <input name="ownername" ngModel type="text" class="form-control" placeholder="Owner Name" required>
-    </div>
-
-    <div class="form-group">
-      <label for="ownercontact">Owner Contact</label>
-      <input name="ownercontact" ngModel type="text" class="form-control" placeholder="Owner Contact" required>
+      <label for="propertyImage">Add Images of the Property</label>
+      <input (change)="selectFile($event)" type="file" class="form-control-file">
+      <div class="progress">
+        <div class="progress-bar bg-info" style="width:50%;"></div>
+      </div>
+      <p *ngIf="IsUploaded">Uploaded Successfully</p>
     </div>
 
     <button style="background-color:black" type="submit" [disabled]="!addRentalForm.valid" class="btn btn-primary btn-block">Submit</button>

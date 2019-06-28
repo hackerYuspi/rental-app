@@ -1,21 +1,22 @@
 <div class="container">
   <div class="row">
     <div class="col">
-      <h2>Property Details</h2>
+      <h2 style="color: aliceblue">Property Details</h2>
       <br>
       <h4 style="color: orange">{{property.title}}</h4>
       <br>
-      <h6 style="color: blue">Property Details</h6>
-      <p>{{property.description}}</p>
+      <h6 style="color: rgb(167, 167, 201)">Property Details</h6>
+      <p style="color: white">{{property.description}}</p>
     </div>
     <div class="col">
-      <h2>Owners Details</h2>
+     <!-- <h2>Owners Details</h2>
       <br>
       <p style="color: rgb(48, 141, 133)">Owners Name : {{property.ownername}}</p>
       <p style="color: rgb(48, 141, 133)">Contact : {{property.ownercontact}}</p>
-      <br>
-      <h2 style="color: red">Price</h2>
-      <h4 style="color: green">{{property.price}}</h4>
+      <br> -->
+      <img width="500px" height="200px" src="{{image | async}}" alt="immage">
+      <h2 style="color: red"><b>Price</b></h2>
+      <h4 style="color: rgb(116, 209, 116)">{{property.price}}</h4>
       <button (click)="showForm=!showForm" class="btn btn-primary btn-block">Enquiry</button>
 
       <ng-container *ngIf="showForm">

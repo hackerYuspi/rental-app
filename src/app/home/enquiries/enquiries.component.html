@@ -1,16 +1,18 @@
-<table class="table table-bordered">
+<div class="container">
+  <table class="table table-bordered">
     <thead>
         <th scope="col">Title</th>
         <th scope="col">Message</th>
         <th scope="col">Email</th>
         <th scope="col">Date</th>
       </thead>
-      <tbody>
+      <tbody style="color: aliceblue">
         <tr *ngFor="let enquiry of enquiries">
-          <td>{{enquiry.title}}</td>
-          <td>{{enquiry.message}}</td>
-          <td>{{enquiry.email}}</td>
-          <td>{{enquiry.timestamp.seconds*1000 | date}}</td>
+          <td>{{enquiries.title}}</td>
+          <td>{{enquiries.message}}</td>
+          <td>{{enquiries.email}}</td>
+          <td>{{enquiry.timestamp}</td>
         </tr>
       </tbody>
 </table>
+</div>

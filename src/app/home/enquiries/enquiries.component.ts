@@ -11,10 +11,10 @@ export class EnquiriesComponent implements OnInit {
   constructor(public enquiryService:EnquiryService) { }
 
   ngOnInit() {
-    this.getEnauiries()
+    this.getEnquiries()
   }
 
-  getEnauiries(){
+  getEnquiries(){
     this.enquiryService.getEnquiries().subscribe(res=>{
       this.enquiries=res
       console.log(this.enquiries)

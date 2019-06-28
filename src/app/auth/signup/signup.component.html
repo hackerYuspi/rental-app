@@ -5,12 +5,16 @@
       <form style="padding: 1cm ;background-color:rgb(10, 37, 48)" (ngSubmit)="signup(signupForm)" #signupForm="ngForm" >
           <h2 style="padding: 0.2cm ; color:dodgerblue; align-content: center;">Sign Up Here</h2>
           <div class="form-group">
+            <label for="inputname">Your Name</label>
+            <input name="inputname" ngModel type="text" class="form-control" id="inputname" placeholder="Enter Your Name" required>
+          </div>
+          <div class="form-group">
             <label for="InputEmail1">Email address</label>
             <input name="inputemail"  ngModel type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required autofocus="">
             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
           </div>
           <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
+            <label for="InputPassword">Password</label>
             <input name="inputpassword"  ngModel type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
           </div>
           <div class="form-group">
@@ -24,7 +28,7 @@
           
             <button [disabled]="!signupForm.valid" type="submit" class="btn btn-primary btn-block">Submit</button>
           
-            Already a Member? <a style="color:cadetblue" routerLink="/auth/signin">Sign In Here</a>
+            Already a User? <a style="color:cadetblue" routerLink="/auth/signin">Sign In Here</a>
             
         </form>
   </div>

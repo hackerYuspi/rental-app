@@ -15,6 +15,7 @@ export class AuthService {
          }
       })
    }
+   
 
    logIn(email,password){
     this.FirebaseAuth.auth.signInWithEmailAndPassword(email,password).then(data=>{
@@ -22,16 +23,18 @@ export class AuthService {
       console.log(data)
        this.router.navigateByUrl('/home')
     }).catch(err=>{
+      alert(err)
       console.log(err)
     })
   }
 
-  signUp(email,password){
+  signUp(email,password,name,contact){
     this.FirebaseAuth.auth.createUserWithEmailAndPassword(email,password).then(data=>{
       this.userDetails=data  
       console.log(data)
       this.router.navigateByUrl('/home')
     }).catch(err=>{
+      alert(err)
       console.log(err)
     })
   }
@@ -48,4 +51,13 @@ export class AuthService {
   getEmail(){
     return this.userDetails.user.email
   }
+  
+  getName(){
+    return this.userDetails.user.name
+  }
+
+  getContact(){
+    return this.userDetails.user.contact
+  }
+
 }

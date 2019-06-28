@@ -21,6 +21,8 @@ import { IndexComponent } from './home/index/index.component';
 import { SinglepropertyComponent } from './home/rentals/singleproperty/singleproperty.component';
 import { ErrorComponent } from './error/error.component';
 import { EnquiriesComponent } from './home/enquiries/enquiries.component';
+import { MypropertiesComponent } from './home/rentals/myproperties/myproperties.component';
+import { EditpropertiesComponent } from './home/rentals/myproperties/editproperties/editproperties.component';
 
 
 
@@ -37,6 +39,9 @@ import { EnquiriesComponent } from './home/enquiries/enquiries.component';
     SinglepropertyComponent,
     ErrorComponent,
     EnquiriesComponent,
+    MypropertiesComponent,
+    EditpropertiesComponent,
+    MypropertiesComponent,
   ],
   imports: [
     BrowserModule,

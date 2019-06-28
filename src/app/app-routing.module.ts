@@ -10,14 +10,19 @@ import { HomeComponent } from './home/home.component';
 import { AuthguardService } from './service/authguard.service';
 import { IndexComponent } from './home/index/index.component';
 import { EnquiriesComponent } from './home/enquiries/enquiries.component';
+import { MypropertiesComponent } from './home/rentals/myproperties/myproperties.component';
+import { EditpropertiesComponent } from './home/rentals/myproperties/editproperties/editproperties.component';
 
 const routes: Routes = [
   {path:'' , component:HomeComponent , canActivate:[AuthguardService]},
-  {path:'home' , component:HomeComponent , children:[
+  {path:'home' , component:HomeComponent ,canActivate:[AuthguardService], children:[
     {path:'' , component:IndexComponent},
     {path:'allproperties' , component:RentalsComponent},
     {path:'addProperty' , component:AddrentalComponent},
     {path:'enquiries' , component: EnquiriesComponent},
+    {path: 'myproperties' , component:MypropertiesComponent, children:[
+      {path:'editproperty' , component:EditpropertiesComponent}
+    ]}
   ]},
   /*{path:'auth' , component:AuthComponent },
   {path:'auth/signin' , component:SigninComponent },
